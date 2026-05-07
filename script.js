@@ -28,8 +28,7 @@ const pixKey = "240cb59d-4ec6-4f1b-bd8f-bd83a9491809";
 // Substitua o "#" pelo link que você criar para cada valor
 const mpLinks = {
     "150,00": "#",
-    "175,00": "#",
-    "225,00": "#",
+    "200,00": "#",
     "250,00": "https://mpago.la/2bqfid8", // Link já configurado
     "300,00": "#",
     "350,00": "#",
