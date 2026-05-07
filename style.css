@@ -204,7 +204,7 @@ section h2::after {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     align-items: center;
-    text-align: left;
+    text-align: center;
     margin-top: 30px;
 }
 
@@ -399,7 +399,7 @@ section h2::after {
 .rsvp form {
     max-width: 500px;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
 }
 
 .form-group {
