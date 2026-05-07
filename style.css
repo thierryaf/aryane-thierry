@@ -100,7 +100,7 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center; /* Garante que o casal fique no centro */
+    object-position: center; /* Padrão para desktop */
     filter: brightness(0.7);
 }
 
@@ -471,8 +471,11 @@ footer {
     .initials { font-size: 2.5rem; }
     .date { font-size: 1.2rem; }
     .logo-box { padding: 10px 20px; }
+
+    /* AJUSTE DE FOCO DA IMAGEM PARA MOBILE */
     .hero-image-container img {
-        object-position: center 95%;
+        object-position: center 85%; /* Puxa o foco para baixo onde o casal está sentado */
+    }
 
     .event-grid { grid-template-columns: 1fr; gap: 20px; }
     .event-grid.reverse { direction: ltr; }
