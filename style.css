@@ -469,7 +469,7 @@ footer {
 
     /* AJUSTE AGRESSIVO DE FOCO DA IMAGEM PARA MOBILE */
     .hero-image-container img {
-        object-position: 80% 85%; /* Foca no casal que está no canto inferior direito */
+        object-position: 60% 65%; /* Foca no casal que está no canto inferior direito */
     }
 
     /* SOBE O CONTEÚDO PARA NÃO FICAR EM CIMA DO CASAL */
