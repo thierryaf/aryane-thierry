@@ -100,7 +100,7 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center; /* Padrão para desktop */
+    object-position: center;
     filter: brightness(0.7);
 }
 
@@ -467,15 +467,21 @@ footer {
     nav ul li { margin: 3px 8px; }
     nav ul li a { font-size: 0.65rem; }
 
-    .hero h1 { font-size: 2rem; letter-spacing: 4px; }
-    .initials { font-size: 2.5rem; }
-    .date { font-size: 1.2rem; }
-    .logo-box { padding: 10px 20px; }
-
-    /* AJUSTE DE FOCO DA IMAGEM PARA MOBILE */
+    /* AJUSTE AGRESSIVO DE FOCO DA IMAGEM PARA MOBILE */
     .hero-image-container img {
-        object-position: center 85%; /* Puxa o foco para baixo onde o casal está sentado */
+        object-position: 80% 95%; /* Foca no casal que está no canto inferior direito */
     }
+
+    /* SOBE O CONTEÚDO PARA NÃO FICAR EM CIMA DO CASAL */
+    .hero {
+        justify-content: flex-start;
+        padding-top: 120px;
+    }
+
+    .hero h1 { font-size: 1.8rem; letter-spacing: 3px; }
+    .initials { font-size: 2.2rem; }
+    .date { font-size: 1.1rem; }
+    .logo-box { padding: 8px 15px; margin-bottom: 10px; }
 
     .event-grid { grid-template-columns: 1fr; gap: 20px; }
     .event-grid.reverse { direction: ltr; }
