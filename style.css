@@ -437,6 +437,32 @@ section h2::after {
     border-radius: 5px;
 }
 
+/* Correção para os botões de rádio (Sim/Não) */
+.radio-group {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+}
+
+.radio-option label {
+    margin: 0;
+    cursor: pointer;
+}
+
 .btn-submit {
     width: 100%;
     padding: 15px;
