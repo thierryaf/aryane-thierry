@@ -472,7 +472,7 @@ footer {
     .date { font-size: 1.2rem; }
     .logo-box { padding: 10px 20px; }
     .hero-image-container img {
-        object-position: center 85%;
+        object-position: center 95%;
 
     .event-grid { grid-template-columns: 1fr; gap: 20px; }
     .event-grid.reverse { direction: ltr; }
