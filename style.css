@@ -204,7 +204,7 @@ section h2::after {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     align-items: center;
-    text-align: center;
+    text-align: left;
     margin-top: 30px;
 }
 
@@ -399,7 +399,7 @@ section h2::after {
 .rsvp form {
     max-width: 500px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
 }
 
 .form-group {
@@ -469,7 +469,7 @@ footer {
 
     /* AJUSTE AGRESSIVO DE FOCO DA IMAGEM PARA MOBILE */
     .hero-image-container img {
-        object-position: 60% 65%; /* Foca no casal que está no canto inferior direito */
+        object-position: 80% 95%; /* Foca no casal que está no canto inferior direito */
     }
 
     /* SOBE O CONTEÚDO PARA NÃO FICAR EM CIMA DO CASAL */
