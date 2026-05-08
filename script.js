@@ -25,9 +25,11 @@ const timer = setInterval(function() {
 const pixKey = "240cb59d-4ec6-4f1b-bd8f-bd83a9491809";
 
 // MAPEAMENTO DE LINKS DO MERCADO PAGO POR VALOR
+// Sincronizado com os links que você já configurou no GitHub
 const mpLinks = {
     "150,00": "#",
     "175,00": "#",
+    "200,00": "#",
     "225,00": "#",
     "250,00": "https://mpago.la/2bqfid8", 
     "300,00": "#",
@@ -107,7 +109,7 @@ form.addEventListener('submit', e => {
         name: document.getElementById('name').value,
         attendance: form.querySelector('input[name="attendance"]:checked').value,
         adults: document.getElementById('adults').value,
-        email: document.getElementById('email').value
+        message: document.getElementById('message').value // Sincronizado com o campo de mensagem
     };
 
     fetch(scriptURL, { 
