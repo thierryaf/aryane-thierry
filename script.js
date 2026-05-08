@@ -27,19 +27,19 @@ const pixKey = "240cb59d-4ec6-4f1b-bd8f-bd83a9491809";
 // MAPEAMENTO DE LINKS DO MERCADO PAGO POR VALOR
 // Substitua o "#" pelo link que você criar para cada valor
 const mpLinks = {
-    "150,00": "#",
-    "200,00": "#",
+    "150,00": "https://mpago.la/2zpRxJR",
+    "200,00": "https://mpago.la/1XmfnXo",
     "250,00": "https://mpago.la/2bqfid8", // Link já configurado
-    "300,00": "#",
-    "350,00": "#",
-    "400,00": "#",
-    "450,00": "#",
-    "500,00": "#",
-    "550,00": "#",
-    "600,00": "#",
-    "650,00": "#",
-    "800,00": "#",
-    "1000,00": "#"
+    "300,00": "https://mpago.la/23DSVbt",
+    "350,00": "https://mpago.la/1g1iz2z",
+    "400,00": "https://mpago.la/2LFnVji",
+    "450,00": "https://mpago.la/1Bt9tJT",
+    "500,00": "https://mpago.la/29WcREp",
+    "550,00": "https://mpago.la/2G97Bvu",
+    "600,00": "https://mpago.la/13tPEn2",
+    "650,00": "https://mpago.la/2XKRo9S",
+    "800,00": "https://mpago.la/2q3DhpB",
+    "1000,00": "https://mpago.la/2sXWr7x"
 };
 
 const modal = document.getElementById("pix-modal");
