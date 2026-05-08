@@ -268,10 +268,14 @@
                 <div class="form-group">
                     <label>Você irá ao evento?</label>
                     <div class="radio-group">
-                        <input type="radio" id="yes" name="attendance" value="sim" checked>
-                        <label for="yes">Sim</label>
-                        <input type="radio" id="no" name="attendance" value="não">
-                        <label for="no">Não</label>
+                        <div class="radio-option">
+                            <input type="radio" id="yes" name="attendance" value="sim" checked>
+                            <label for="yes">Sim</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="no" name="attendance" value="não">
+                            <label for="no">Não</label>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
@@ -285,8 +289,8 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="message">Nos deixe uma frase</label>
+                    <textarea id="message" name="message" rows="4" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; resize: vertical;"></textarea>
                 </div>
                 <button type="submit" class="btn-submit">Confirmar Presença</button>
             </form>
@@ -297,7 +301,7 @@
         <p>&copy; 2026 Aryane e Thierry. Feito com amor.</p>
     </footer>
 
-    <!-- Modal de Pagamento Atualizado -->
+    <!-- Modal de Pagamento -->
     <div id="pix-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closePixModal()">&times;</span>
@@ -309,18 +313,15 @@
                 <p>Escolha como deseja presentear:</p>
                 
                 <div class="payment-options">
-                    <!-- Opção PIX -->
                     <button class="payment-btn btn-pix" onclick="showPix()">
-                        <span>PIX</span>
+                        <span>PIX Direto (Sem Taxas)</span>
                     </button>
 
-                    <!-- Opção Cartão -->
                     <a id="btn-card-link" href="#" target="_blank" class="payment-btn btn-card">
                         <span>Cartão de Crédito</span>
                     </a>
                 </div>
 
-                <!-- Área do PIX (oculta inicialmente) -->
                 <div class="pix-info">
                     <p class="pix-label">Chave PIX (Aleatória):</p>
                     <div class="pix-key-container">
