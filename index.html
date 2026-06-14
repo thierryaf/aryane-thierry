@@ -10,21 +10,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="back-to-top" title="Voltar ao topo">&#8679;</button>
+
+    <header id="site-header">
         <nav>
-            <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#casal">O CASAL</a></li>
-                <li><a href="#cerimonia">CERIMÔNIA</a></li>
-                <li><a href="#recepcao">RECEPÇÃO</a></li>
-                <li><a href="#presentes">LISTA DE PRESENTES</a></li>
-                <li><a href="#presenca">CONFIRME SUA PRESENÇA E NOS DEIXE UMA FRASE</a></li>
+            <div class="nav-brand">A • T</div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="nav-menu">
+                <li><a href="#home" class="nav-link">HOME</a></li>
+                <li><a href="#casal" class="nav-link">O CASAL</a></li>
+                <li><a href="#cerimonia" class="nav-link">CERIMÔNIA</a></li>
+                <li><a href="#recepcao" class="nav-link">RECEPÇÃO</a></li>
+                <li><a href="#presentes" class="nav-link">LISTA DE PRESENTES</a></li>
+                <li><a href="#presenca" class="nav-link">CONFIRME SUA PRESENÇA</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-content">
+        <div class="hero-content fade-in">
             <div class="logo-box">
                 <div class="initials">A • T</div>
             </div>
@@ -32,11 +40,12 @@
             <p class="date">08 | 08 | 2026</p>
         </div>
         <div class="hero-image-container">
-            <img src="assets/images/tratada.jpeg" alt="Aryane e Thierry">
+            <img src="assets/images/tratada.jpeg" alt="Aryane e Thierry" loading="eager">
         </div>
+        <a href="#casal" class="scroll-down">&#8595;</a>
     </section>
 
-    <section class="intro">
+    <section class="intro reveal">
         <div class="container">
             <p>Criamos esse site para compartilhar com vocês os detalhes da organização do nosso casamento. Estamos muito felizes e contamos com a presença de todos no nosso grande dia! Aqui vocês encontrarão os locais de cerimônia e recepção, tanto como os horários. Ah, é importante também confirmar sua presença. Para isto contamos com sua ajuda clicando no menu "Confirme sua Presença" e preenchendo os dados necessários. Para nos presentear, escolha qualquer item da Lista de Casamento, ficaremos extremamente felizes com sua ajuda, claro, se você puder, não se sinta obrigado. Fiquem à vontade! Aguardamos vocês no nosso grande dia!</p>
         </div>
@@ -54,25 +63,25 @@
         </div>
     </section>
 
-    <section id="casal" class="couple">
+    <section id="casal" class="couple reveal">
         <div class="container">
             <h2>O Casal</h2>
             <div class="couple-content">
                 <p>Nossa história começa bem no final de 2016, quando trocamos as primeiras mensagens, e depois de muitas conversas, ligações, veio o pedido de namoro em 2017, um momento pra ficar na memória, em meio a toda escola. Desde então, muito amor, muito companheirismo e união e agora, após 9 anos juntos....</p><br>
             </div>
-            <div class="event-image">
-                <img src="assets/images/fotodupla.jpeg" alt="Historias"><br>
+            <div class="event-image reveal">
+                <img src="assets/images/fotodupla.jpeg" alt="Historias" loading="lazy"><br>
             </div>
             <div class="couple-content">
                 <h2>Vamos nos casar, com a benção de Deus!</h2><br>
             </div>
-            <div class="event-image">
-                <img src="assets/images/preigreja.jpeg" alt="pre"><br>
+            <div class="event-image reveal">
+                <img src="assets/images/preigreja.jpeg" alt="pre" loading="lazy"><br>
             </div>
         </div>
     </section>
 
-    <section id="cerimonia" class="event">
+    <section id="cerimonia" class="event reveal">
         <div class="container">
             <h2>Cerimônia</h2>
             <div class="event-grid">
@@ -84,13 +93,13 @@
                     <a href="https://maps.google.com/maps?q=Paróquia+Nossa+Senhora+do+Perpétuo+Socorro+Mondubim" target="_blank" class="btn">Ver no Mapa</a>
                 </div>
                 <div class="event-image">
-                    <img src="assets/images/church.jpeg" alt="Paróquia Nossa Senhora do Perpétuo Socorro">
+                    <img src="assets/images/church.jpeg" alt="Paróquia Nossa Senhora do Perpétuo Socorro" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="recepcao" class="event">
+    <section id="recepcao" class="event reveal">
         <div class="container">
             <h2>Recepção</h2>
             <div class="event-grid reverse">
@@ -102,183 +111,164 @@
                     <a href="https://maps.google.com/maps?q=Buffet+Garden+Conceito+Fortaleza" target="_blank" class="btn">Ver no Mapa</a>
                 </div>
                 <div class="event-image">
-                    <img src="assets/images/reception.jpg" alt="Buffet Garden Conceito">
+                    <img src="assets/images/reception.jpg" alt="Buffet Garden Conceito" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="presentes" class="gifts">
+    <section id="presentes" class="gifts reveal">
         <div class="container">
             <h2>Lista de Presentes</h2>
             <p class="gift-intro">Alegra-nos muito ter você ao nosso lado neste dia. Para aqueles que gostariam de nos presentear, deixamos as opções de contribuição, totalmente a seu critério e sem compromisso</p>
 
             <div class="gift-grid" id="gift-list">
-                <!-- R$ 80,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/noivo.png" alt="massagem"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/noivo.png" alt="massagem" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Patrocine a despedida da noivo</h3>
                         <p class="price">R$ 80,00</p>
                         <button class="btn-gift" onclick="presentear('Patrocine a despedida da noivo', '80,00')">Presentear</button>
                     </div>
                 </div>
-                <!-- R$ 100,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/controle.jpg" alt="controles"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/controle.jpg" alt="controles" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Conjunto de controle remotos para não ter briga</h3>
                         <p class="price">R$ 100,00</p>
                         <button class="btn-gift" onclick="presentear('Conjunto de controle remotos para não ter briga', '100,00')">Presentear</button>
                     </div>
                 </div>
-                <!-- R$ 120,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/capaceterolo.png" alt="Capacete"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/capaceterolo.png" alt="Capacete" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Capacete contra rolo de macarrão para o noivo</h3>
                         <p class="price">R$ 120,00</p>
                         <button class="btn-gift" onclick="presentear('Capacete contra rolo de macarrão para o noivo', '120,00')">Presentear</button>
                     </div>
                 </div>
-                <!-- R$ 150,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/noiva.png" alt="noiva"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/noiva.png" alt="noiva" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Patrocine a despedida da noiva</h3>
                         <p class="price">R$ 150,00</p>
                         <button class="btn-gift" onclick="presentear('Patrocine a despedida da noiva', '150,00')">Presentear</button>
                     </div>
                 </div>
-                <!-- R$ 200,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/taxi.jpg" alt="taxi"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/taxi.jpg" alt="taxi" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Ajudinha para o taxi um pouquinho mais longe</h3>
                         <p class="price">R$ 200,00</p>
                         <button class="btn-gift" onclick="presentear('Ajudinha para o taxi um pouquinho mais longe', '200,00')">Presentear</button>
                     </div>
                 </div>
-                <!-- R$ 220,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/spa.jpg" alt="spa"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/spa.jpg" alt="spa" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Dia de Spa para o casal</h3>
                         <p class="price">R$ 220,00</p>
                         <button class="btn-gift" onclick="presentear('Dia de Spa para o casal', '220,00')">Presentear</button>
                     </div>
                 </div>
-                <!-- R$ 250,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/dolar.png" alt="dolar"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/dolar.png" alt="dolar" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Ajuda para os noivos comprarem dólares pra viagem</h3>
                         <p class="price">R$ 250,00</p>
                         <button class="btn-gift" onclick="presentear('Ajuda para os noivos comprarem dólares pra viagem', '250,00')">Presentear</button>
                     </div>
                 </div>
-                <!-- R$ 300,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/mobiliada.jpg" alt="mobiliada"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/mobiliada.jpg" alt="mobiliada" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Ajuda para mobiliar a casa</h3>
                         <p class="price">R$ 300,00</p>
                         <button class="btn-gift" onclick="presentear('Ajuda para mobiliar a casa', '300,00')">Presentear</button>
                     </div>
                 </div>
-                <!-- R$ 320,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/ressaca.jpg" alt="ressaca"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/ressaca.jpg" alt="ressaca" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Kit ressaca para os noivos</h3>
                         <p class="price">R$ 320,00</p>
                         <button class="btn-gift" onclick="presentear('Kit ressaca para os noivos', '320,00')">Presentear</button>
                     </div>
                 </div>
-                <!-- R$ 350,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/bebe.jpg" alt="Bebê"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/bebe.jpg" alt="Bebê" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Aluguel de um bebê para treinamento</h3>
                         <p class="price">R$ 350,00</p>
                         <button class="btn-gift" onclick="presentear('Aluguel de um bebê para treinamento', '350,00')">Presentear</button>
                     </div>
                 </div>
-                <!-- R$ 400,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/espirro.png" alt="espirro"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/espirro.png" alt="espirro" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Espirro em paris</h3>
                         <p class="price">R$ 400,00</p>
                         <button class="btn-gift" onclick="presentear('Espirro em paris', '400,00')">Presentear</button>
                     </div>
                 </div>
-                <!-- R$ 450,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/massagem.jpg" alt="massagem"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/massagem.jpg" alt="massagem" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Sessões de massagem para o casal descansar</h3>
                         <p class="price">R$ 450,00</p>
                         <button class="btn-gift" onclick="presentear('Sessões de massagem para o casal descansar', '450,00')">Presentear</button>
                     </div>
                 </div>
-                <!-- R$ 500,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/safari.jpg" alt="safari"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/safari.jpg" alt="safari" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Dia de safari para os noivos</h3>
                         <p class="price">R$ 500,00</p>
                         <button class="btn-gift" onclick="presentear('Dia de safari para os noivos', '500,00')">Presentear</button>
                     </div>
                 </div>
-                <!-- R$ 550,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/brinde.jpg" alt="brind"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/brinde.jpg" alt="brind" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Brinde da noite de núpcia</h3>
                         <p class="price">R$ 550,00</p>
                         <button class="btn-gift" onclick="presentear('Brinde da noite de núpcia', '550,00')">Presentear</button>
                     </div>
                 </div>
-                <!-- R$ 600,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/mergulho.jpg" alt="golfinho"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/mergulho.jpg" alt="golfinho" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Mergulho com golfinhos para o casal</h3>
                         <p class="price">R$ 600,00</p>
                         <button class="btn-gift" onclick="presentear('Mergulho com golfinhos para o casal', '600,00')">Presentear</button>
                     </div>
                 </div>
-                <!-- R$ 650,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/carro.jpg" alt="carro"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/carro.jpg" alt="carro" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Aluguel de carro para os noivos conhecer a cidade</h3>
                         <p class="price">R$ 650,00</p>
                         <button class="btn-gift" onclick="presentear('Aluguel de carro para os noivos conhecer a cidade', '650,00')">Presentear</button>
                     </div>
                 </div>
-                <!-- R$ 700,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/relaxando.jpg" alt="lua de mel"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/relaxando.jpg" alt="lua de mel" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Ajuda para a lua de mel dos noivos</h3>
                         <p class="price">R$ 700,00</p>
                         <button class="btn-gift" onclick="presentear('Ajuda para a lua de mel dos noivos', '700,00')">Presentear</button>
                     </div>
                 </div>
-                <!-- R$ 800,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/balao.jpg" alt="balao"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/balao.jpg" alt="balao" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Passeio de balão</h3>
                         <p class="price">R$ 800,00</p>
                         <button class="btn-gift" onclick="presentear('Passeio de balão', '800,00')">Presentear</button>
                     </div>
                 </div>
-                <!-- R$ 1.000,00 -->
                 <div class="gift-card">
-                    <div class="gift-image"><img src="assets/images/gifts/ilha.jpg" alt="ilha"></div>
+                    <div class="gift-image"><img src="assets/images/gifts/ilha.jpg" alt="ilha" loading="lazy"></div>
                     <div class="gift-card-content">
                         <h3>Hospedagem em uma ilha</h3>
                         <p class="price">R$ 1.000,00</p>
@@ -289,13 +279,13 @@
         </div>
     </section>
 
-    <section id="presenca" class="rsvp">
+    <section id="presenca" class="rsvp reveal">
         <div class="container">
             <h2>Confirme sua presença</h2>
             <form id="rsvp-form">
                 <div class="form-group">
                     <label for="name">Nome completo</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required placeholder="Seu nome completo">
                 </div>
                 <div class="form-group">
                     <label>Você irá ao evento?</label>
@@ -322,7 +312,7 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Nos deixe uma frase</label>
-                    <textarea id="message" name="message" rows="4" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; resize: vertical;"></textarea>
+                    <textarea id="message" name="message" rows="4" placeholder="Deixe uma mensagem carinhosa para o casal..."></textarea>
                 </div>
                 <button type="submit" class="btn-submit">Confirmar Presença</button>
             </form>
@@ -330,7 +320,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 Aryane e Thierry. Feito com amor.</p>
+        <p>&copy; 2026 Aryane e Thierry. Feito com amor. ♥</p>
     </footer>
 
     <!-- Modal de Pagamento -->
@@ -360,7 +350,7 @@
                     <button class="btn-gift" style="width: 100%; margin-top: 10px;" onclick="copyPixOnly()">Copiar Chave Novamente</button>
                 </div>
             </div>
-            <button class="btn-close-modal" onclick="closePixModal()">Feather</button>
+            <button class="btn-close-modal" onclick="closePixModal()">Fechar</button>
         </div>
     </div>
 
