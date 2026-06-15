@@ -95,25 +95,25 @@ const pixKey = "240cb59d-4ec6-4f1b-bd8f-bd83a9491809";
 // Valores novos (120,00 / 220,00 / 320,00 / 700,00) ficam sem link
 // até você criar os links no Mercado Pago e adicionar aqui
 const mpLinks = {
-    "80,00":    "https://mpago.la/1AiWPee",
-    "100,00":   "https://mpago.la/2hLDjL9",
-    "120,00":   "https://mpago.la/1ij3NkY",
-    "150,00":   "https://mpago.la/2zpRxJR",
-    "200,00":   "https://mpago.la/1XmfnXo",
-    "220,00":   "https://mpago.la/2FKfKow",
-    "250,00":   "https://mpago.la/2bqfid8",
-    "300,00":   "https://mpago.la/23DSVbt",
-    "320,00":   "https://mpago.la/16QpbCG",
-    "350,00":   "https://mpago.la/1g1iz2z",
-    "400,00":   "https://mpago.la/2LFnVji",
-    "450,00":   "https://mpago.la/1Bt9tJT",
-    "500,00":   "https://mpago.la/29WcREp",
-    "550,00":   "https://mpago.la/2G97Bvu",
-    "600,00":   "https://mpago.la/13tPEn2",
-    "650,00":   "https://mpago.la/2XKRo9S",
-    "700,00":   "https://mpago.la/218JvWF",
-    "800,00":   "https://mpago.la/2q3DhpB",
-    "1.000,00": "https://mpago.la/2sXWr7"
+    "80,00":    "https://link.infinitepay.io/thierryaf/VC1D-rTMBGedYak-80,00",
+    "100,00":   "https://link.infinitepay.io/thierryaf/VC1D-PKKRe1EJZQ-100,00",
+    "120,00":   "https://link.infinitepay.io/thierryaf/VC1D-wNnAa2geB9-120,00",
+    "150,00":   "https://link.infinitepay.io/thierryaf/VC1D-KwPHfwfkvT-150,00",
+    "200,00":   "https://link.infinitepay.io/thierryaf/VC1D-xFVykY9kko-200,00",
+    "220,00":   "https://link.infinitepay.io/thierryaf/VC1D-L6Zn7LpJXY-220,00",
+    "250,00":   "https://link.infinitepay.io/thierryaf/VC1D-2EPoTlJcov-250,00",
+    "300,00":   "https://link.infinitepay.io/thierryaf/VC1D-YDshNbBUv1-300,00",
+    "320,00":   "https://link.infinitepay.io/thierryaf/VC1D-5dgoJB6IHm-320,00",
+    "350,00":   "https://link.infinitepay.io/thierryaf/VC1D-4Nng9HTKZt-350,00",
+    "400,00":   "https://link.infinitepay.io/thierryaf/VC1D-KrQaDdAkwz-400,00",
+    "450,00":   "https://link.infinitepay.io/thierryaf/VC1D-taEpbvcUN9-450,00",
+    "500,00":   "https://link.infinitepay.io/thierryaf/VC1D-cbIhT1A4aE-500,00",
+    "550,00":   "https://link.infinitepay.io/thierryaf/VC1D-MgMTMW43uv-550,00",
+    "600,00":   "https://link.infinitepay.io/thierryaf/VC1D-bpjPaFHKym-600,00",
+    "650,00":   "https://link.infinitepay.io/thierryaf/VC1D-E9J3nMcmp6-650,00",
+    "700,00":   "https://link.infinitepay.io/thierryaf/VC1D-QWqGrCaLem-700,00",
+    "800,00":   "https://link.infinitepay.io/thierryaf/VC1D-liYPNki5ah-800,00",
+    "1.000,00": "https://link.infinitepay.io/thierryaf/VC1D-0xSmlATCit-1000,00"
 };
 
 const modal         = document.getElementById("pix-modal");
