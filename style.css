@@ -765,9 +765,12 @@ footer {
     .event-grid { grid-template-columns: 1fr; gap: 20px; }
     .event-grid.reverse { direction: ltr; }
     .event-grid .event-image img {
-        max-height: 280px;
-        object-fit: cover;
-        object-position: center top;
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+    object-position: center;
+    background: var(--secondary-color);
+}
     }
 
     .couple .event-image img {
