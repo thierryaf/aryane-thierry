@@ -334,14 +334,25 @@ section h2::after {
 
 .event-image img {
     width: 100%;
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: block;
 }
 
 .event-image img:hover {
     transform: scale(1.02);
     box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.couple .event-image img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .btn {
@@ -400,12 +411,14 @@ section h2::after {
     width: 100%;
     height: 160px;
     overflow: hidden;
+    background: #f5f5f5;
 }
 
 .gift-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     transition: transform 0.4s ease;
 }
 
@@ -751,22 +764,54 @@ footer {
 
     .event-grid { grid-template-columns: 1fr; gap: 20px; }
     .event-grid.reverse { direction: ltr; }
+    .event-grid .event-image img {
+        max-height: 280px;
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    .couple .event-image img {
+        max-height: 380px;
+        object-fit: contain;
+        background: var(--secondary-color);
+        padding: 10px;
+    }
 
     section h2 { font-size: 1.8rem; }
 
+    /* Fotos dos presentes — sem corte no mobile */
     .gift-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .gift-image {
+        height: auto;
+        min-height: 120px;
+        max-height: 180px;
+    }
+    .gift-image img {
+        object-fit: contain;
+        object-position: center;
+    }
     .gift-card h3 { font-size: 0.8rem; height: 3.2em; }
     .price { font-size: 0.95rem; }
     .btn-gift { font-size: 0.8rem; padding: 8px; }
-    .gift-image { height: 120px; }
 
     #back-to-top { bottom: 20px; right: 16px; }
 }
 
 @media (max-width: 480px) {
     .gift-grid { grid-template-columns: 1fr; }
-    .gift-image { height: 180px; }
+    .gift-image {
+        height: auto;
+        min-height: 140px;
+        max-height: 220px;
+    }
+    .gift-image img {
+        object-fit: contain;
+        object-position: center;
+    }
     .gift-card h3 { font-size: 1rem; height: auto; margin-bottom: 10px; }
+
+    .event-grid .event-image img { max-height: 220px; }
+    .couple .event-image img { max-height: 300px; }
 
     #timer { gap: 10px; }
     .time-box { min-width: 60px; }
