@@ -813,7 +813,13 @@ footer {
     }
     .gift-card h3 { font-size: 1rem; height: auto; margin-bottom: 10px; }
 
-    .event-grid .event-image img { max-height: 220px; }
+    .event-grid .event-image img {
+    height: auto;
+    max-height: 260px;
+    object-fit: contain;
+    object-position: center;
+    background: var(--secondary-color);
+}
     .couple .event-image img { max-height: 300px; }
 
     #timer { gap: 10px; }
