@@ -172,6 +172,43 @@ window.addEventListener('keydown', function(event) {
 });
 
 // =====================
+// RSVP — CAMPOS DINÂMICOS DE NOMES
+// =====================
+const adultsSelect = document.getElementById('adults');
+const guestNamesContainer = document.getElementById('guest-names-container');
+
+function generateGuestNameFields(quantity) {
+    guestNamesContainer.innerHTML = '';
+    
+    if (quantity > 1) {
+        const title = document.createElement('div');
+        title.style.marginTop = '20px';
+        title.style.marginBottom = '10px';
+        title.style.textAlign = 'left';
+        title.innerHTML = '<p style="font-weight: 600; font-size: 0.95rem; margin-bottom: 10px;">Nomes dos acompanhantes:</p>';
+        guestNamesContainer.appendChild(title);
+        
+        for (let i = 1; i < quantity; i++) {
+            const formGroup = document.createElement('div');
+            formGroup.className = 'form-group';
+            formGroup.innerHTML = `
+                <label for="guest-${i}">Acompanhante ${i}</label>
+                <input type="text" id="guest-${i}" name="guest-${i}" placeholder="Nome completo" required>
+            `;
+            guestNamesContainer.appendChild(formGroup);
+        }
+    }
+}
+
+// Gerar campos ao carregar a página (padrão é 1 pessoa)
+generateGuestNameFields(1);
+
+// Gerar campos quando o usuário mudar a quantidade
+adultsSelect.addEventListener('change', (e) => {
+    generateGuestNameFields(parseInt(e.target.value));
+});
+
+// =====================
 // RSVP — GOOGLE SHEETS
 // =====================
 const scriptURL = 'https://script.google.com/macros/s/AKfycbx4Cw0vdQrWmXiPMtw_XGujHY5zucQ73tf0O3En4t2gPi_EjpTVYX2gWDe1oYa3DBuKzQ/exec';
@@ -185,10 +222,22 @@ form.addEventListener('submit', e => {
     submitBtn.innerText = "Enviando...";
     submitBtn.disabled  = true;
 
+    const quantity = parseInt(document.getElementById('adults').value);
+    const guestNames = [];
+    
+    // Coletar nomes dos acompanhantes
+    for (let i = 1; i < quantity; i++) {
+        const guestName = document.getElementById(`guest-${i}`).value;
+        if (guestName) {
+            guestNames.push(guestName);
+        }
+    }
+
     const formData = {
         name:       document.getElementById('name').value,
         attendance: form.querySelector('input[name="attendance"]:checked').value,
-        adults:     document.getElementById('adults').value,
+        adults:     quantity,
+        guests:     guestNames.join(', '),
         message:    document.getElementById('message').value
     };
 
@@ -201,6 +250,7 @@ form.addEventListener('submit', e => {
         submitBtn.disabled  = false;
         alert("Obrigado por confirmar sua presença! Seus dados foram salvos na nossa lista.");
         form.reset();
+        generateGuestNameFields(1);
     })
     .catch(error => {
         submitBtn.innerText = originalText;
