@@ -224,28 +224,24 @@ form.addEventListener('submit', e => {
 
     const mainName = document.getElementById('name').value.trim();
     const quantity = parseInt(document.getElementById('adults').value);
-    const allNames = [mainName]; // Começar com o nome principal
-    
-    // Coletar nomes dos acompanhantes
+
+    // Coletar apenas os acompanhantes (o titular NÃO entra na ordenação)
+    const guestNames = [];
     for (let i = 1; i < quantity; i++) {
         const guestName = document.getElementById(`guest-${i}`).value.trim();
         if (guestName) {
-            allNames.push(guestName);
+            guestNames.push(guestName);
         }
     }
-    
-    // Ordenar todos os nomes alfabeticamente (case-insensitive)
-    allNames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
-    
-    // Separar o nome principal do resto
-    const sortedMainName = allNames[0];
-    const sortedGuestNames = allNames.slice(1);
+
+    // Ordena somente os acompanhantes entre si (cosmético — pode remover se quiser)
+    guestNames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
     const formData = {
-        name:       sortedMainName,
+        name:       mainName,
         attendance: form.querySelector('input[name="attendance"]:checked').value,
         adults:     quantity,
-        guests:     sortedGuestNames.length > 0 ? sortedGuestNames.join(', ') : '',
+        guests:     guestNames.length > 0 ? guestNames.join(', ') : '',
         message:    document.getElementById('message').value
     };
 
