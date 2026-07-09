@@ -222,22 +222,30 @@ form.addEventListener('submit', e => {
     submitBtn.innerText = "Enviando...";
     submitBtn.disabled  = true;
 
+    const mainName = document.getElementById('name').value.trim();
     const quantity = parseInt(document.getElementById('adults').value);
-    const guestNames = [];
+    const allNames = [mainName]; // Começar com o nome principal
     
     // Coletar nomes dos acompanhantes
     for (let i = 1; i < quantity; i++) {
-        const guestName = document.getElementById(`guest-${i}`).value;
+        const guestName = document.getElementById(`guest-${i}`).value.trim();
         if (guestName) {
-            guestNames.push(guestName);
+            allNames.push(guestName);
         }
     }
+    
+    // Ordenar todos os nomes alfabeticamente (case-insensitive)
+    allNames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+    
+    // Separar o nome principal do resto
+    const sortedMainName = allNames[0];
+    const sortedGuestNames = allNames.slice(1);
 
     const formData = {
-        name:       document.getElementById('name').value,
+        name:       sortedMainName,
         attendance: form.querySelector('input[name="attendance"]:checked').value,
         adults:     quantity,
-        guests:     guestNames.join(', '),
+        guests:     sortedGuestNames.length > 0 ? sortedGuestNames.join(', ') : '',
         message:    document.getElementById('message').value
     };
 
